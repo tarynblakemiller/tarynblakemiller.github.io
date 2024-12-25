@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  background: linear-gradient(147.52deg, #f9fafb 8.89%, #d2d6db 100.48%);
+}
+
+:root {
+  --breakpoint-desktop: 1440px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile: 375px;
+
+  --text-color-primary: #171717;
+  --text-color-tertiary: #737373;
+
+  --background-color-primary: #fff;
+  --background-color-primary-inverted: #0a0a0a;
+
+  --border-color-primary: #e5e5e5;
+  --border-color-secondary: #9ca3af;
+
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}
+
+p {
+  display: -webkit-box;
+  line-height: 24px;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+@media screen and (min-width: var(--breakpoint-tablet)) {
+  .container {
+    min-height: var(--breakpoint-desktop);
+  }
+}
+
+@media screen and (min-width: var(--breakpoint-desktop)) {
+  .container {
+    min-height: var(--breakpoint-tablet);
+  }
+}
+
+.card-testimonial-container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  background-color: var(--background-color-primary);
+  border-radius: 8px;
+  width: 340px;
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  color: #525252;
+}
+
+.card-profile-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.card-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.card-avatar {
+  width: 48px;
+}
+
+.card-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  line-height: 28px;
+}
+
+.card-username {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-tertiary);
+  line-height: 24px;
+}
+
+.credits {
+  color: #777;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.credits a {
+  color: #000;
+  font-weight: bold;
+}
